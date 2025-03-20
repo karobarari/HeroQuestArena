@@ -18,7 +18,6 @@ public int attack(Hero target) {
 
     int damage = getAttackPower();
 
-    // Rage bonus: The higher the rageLevel, the more bonus damage
     damage += getBonusPower();
 
     int newTargetHp = target.getHp() - damage;

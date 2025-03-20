@@ -11,8 +11,6 @@ class Mage extends Hero {
     public int getMagicPower() { return magicPower; }
     public void setMagicPower(int magicPower) { this.magicPower = magicPower; }
 
-    // Mage.java
-
 @Override
 public int attack(Hero target) {
     System.out.println(getName() + " (Mage) casts a magical bolt at " + target.getName() + "!");
