@@ -1,15 +1,15 @@
 package HeroQuestArena;
 
 class Warrior extends Hero {
-    private int rageLevel;
+    private int bonus;
 
-    public Warrior(String name, int hp, int attackPower, int defenseLevel, int rageLevel) {
-        super(name, "Warrior", hp, attackPower, defenseLevel, rageLevel);
-        this.rageLevel = rageLevel;
+    public Warrior(String name, int hp, int attackPower, int defenseLevel, int bonus) {
+        super(name, "Warrior", hp, attackPower, defenseLevel, bonus);
+        this.bonus = bonus;
     }
 
-    public int getRageLevel() { return rageLevel; }
-    public void setRageLevel(int rageLevel) { this.rageLevel = rageLevel; }
+    public int getBonusPower() { return bonus; }
+    public void setBonusPower(int bonus) { this.bonus = bonus; }
 
 
 @Override
@@ -19,7 +19,7 @@ public int attack(Hero target) {
     int damage = getAttackPower();
 
     // Rage bonus: The higher the rageLevel, the more bonus damage
-    damage += getRageLevel();
+    damage += getBonusPower();
 
     int newTargetHp = target.getHp() - damage;
     target.setHp(newTargetHp);
